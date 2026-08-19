@@ -5,7 +5,6 @@ import {
   CalendarDays,
   Check,
   Gift,
-  Leaf,
   MapPin,
   Pencil,
   Plus,
@@ -252,8 +251,12 @@ function App() {
 
       <div className="relative z-10 mx-auto grid h-full w-full max-w-[1560px] grid-cols-[minmax(280px,.92fr)_minmax(420px,1.35fr)] items-center gap-[clamp(18px,4vw,70px)] px-[clamp(20px,5vw,72px)] py-[clamp(18px,3vh,38px)] max-md:grid-cols-1 max-md:grid-rows-[auto_1fr] max-md:gap-1 max-md:px-4 max-md:pb-5 max-md:pt-4">
         <section className="max-md:text-center">
-          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="mb-[clamp(10px,2vh,22px)] inline-flex items-center gap-2 rounded-full border border-[#d8b66f]/35 bg-[#071d17]/35 px-3.5 py-2 text-[10px] font-semibold uppercase tracking-[0.25em] text-[#efd69a] shadow-lg backdrop-blur-xl max-md:mb-1.5 max-md:px-3 max-md:py-1.5 max-md:text-[8px]">
-            <Leaf className="size-3.5" /> Vi Tiên Cát Spa · Ecopark
+          <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="brand-lockup mb-[clamp(10px,2vh,22px)] inline-flex items-center gap-3 rounded-[20px] border border-[#d8b66f]/30 bg-[#071d17]/40 px-3.5 py-2.5 text-left shadow-lg backdrop-blur-xl max-md:mb-1.5 max-md:gap-2 max-md:px-3 max-md:py-1.5">
+            <img src="/vi-tien-cat-mark.svg" alt="Logo Vi Tiên Cát" className="h-9 w-12 object-contain drop-shadow-[0_0_12px_rgba(234,201,121,.28)] max-md:h-7 max-md:w-9" />
+            <span className="block leading-none">
+              <span className="block font-serif text-[13px] font-semibold tracking-[.18em] text-[#f2d88f] max-md:text-[10px]">VI TIÊN CÁT</span>
+              <span className="mt-1 block text-[8px] uppercase tracking-[.18em] text-[#f4ead4]/65 max-md:text-[7px]">Dưỡng Sinh Tùng Hoa · Ecopark</span>
+            </span>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .08 }}>
