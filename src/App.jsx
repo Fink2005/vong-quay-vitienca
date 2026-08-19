@@ -10,7 +10,6 @@ import {
   Plus,
   RotateCcw,
   Settings,
-  Sparkles,
   Trash2,
   X,
 } from 'lucide-react'
@@ -96,15 +95,29 @@ function PrizeWheel({ prizes, spinning, rotation, onSpin, onSpinComplete }) {
       </div>
 
       <motion.button
-        whileHover={{ scale: spinning ? 1 : 1.04 }}
-        whileTap={{ scale: spinning ? 1 : 0.96 }}
+        whileHover={{ scale: spinning ? 1 : 1.045 }}
+        whileTap={{ scale: spinning ? 1 : 0.965 }}
         onClick={onSpin}
         disabled={spinning || prizes.length === 0}
-        className="group absolute z-20 flex aspect-square w-[27%] flex-col items-center justify-center rounded-full border-[5px] border-[#ead39c] bg-[#10352d]/95 text-[#fff7e8] shadow-[0_14px_36px_rgba(0,0,0,.4),inset_0_0_0_1px_rgba(255,255,255,.15)] outline-none backdrop-blur-md transition disabled:cursor-not-allowed disabled:opacity-60"
+        aria-label={spinning ? 'Vòng quay đang quay' : 'Quay vòng quay may mắn'}
+        className="group absolute z-20 flex aspect-square w-[29%] flex-col items-center justify-center overflow-hidden rounded-full border-[5px] border-[#ead39c] bg-[radial-gradient(circle_at_50%_28%,#174c40_0%,#0d3028_58%,#08231d_100%)] text-[#fff7e8] shadow-[0_16px_42px_rgba(0,0,0,.46),inset_0_0_0_1px_rgba(255,255,255,.14),inset_0_0_30px_rgba(234,201,121,.06)] outline-none transition disabled:cursor-not-allowed disabled:opacity-70"
       >
-        <Sparkles className="mb-1 size-[clamp(16px,2.3vw,28px)] text-[#eacb86]" strokeWidth={1.6} />
-        <span className="text-[clamp(10px,1.55vw,19px)] font-semibold tracking-[0.2em]">{spinning ? 'ĐANG QUAY' : 'QUAY NGAY'}</span>
-        <span className="mt-0.5 text-[clamp(7px,.9vw,10px)] uppercase tracking-[0.16em] text-[#d7c8a6]">100% có quà</span>
+        <span className="pointer-events-none absolute inset-[8%] rounded-full border border-[#efd48e]/18" />
+        <img
+          src="/vi-tien-cat-mark.svg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none w-[56%] object-contain drop-shadow-[0_0_9px_rgba(237,207,126,.35)] transition-transform duration-300 group-hover:scale-[1.03]"
+        />
+        <span className="pointer-events-none -mt-[3%] font-serif text-[clamp(8px,1.15vw,14px)] font-semibold tracking-[0.12em] text-[#f2d484]">
+          VI TIÊN CÁT
+        </span>
+        <span className="pointer-events-none mt-[1%] font-serif text-[clamp(5px,.62vw,8px)] italic tracking-[0.04em] text-[#e7d4a6]/85">
+          Dưỡng Sinh Tùng Hoa
+        </span>
+        <span className="pointer-events-none mt-[4%] rounded-full border border-[#efd48e]/18 bg-black/10 px-[8%] py-[2%] text-[clamp(5px,.58vw,8px)] font-bold uppercase tracking-[0.15em] text-[#f8e6b6]/80">
+          {spinning ? 'Đang quay' : 'Chạm để quay'}
+        </span>
       </motion.button>
     </div>
   )
