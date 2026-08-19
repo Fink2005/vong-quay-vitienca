@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 500" fill="none">
+  <defs>
+    <linearGradient id="gold" x1="110" y1="70" x2="530" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF0A8"/><stop offset=".18" stop-color="#F4CF6A"/><stop offset=".5" stop-color="#C99732"/><stop offset=".78" stop-color="#F2D47B"/><stop offset="1" stop-color="#A8751D"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <g stroke="url(#gold)" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+    <path d="M320 360C308 250 302 147 320 74C338 147 332 250 320 360Z"/>
+    <path d="M308 355C251 274 218 190 224 127C283 162 316 240 320 348"/>
+    <path d="M332 355C389 274 422 190 416 127C357 162 324 240 320 348"/>
+    <path d="M286 370C205 325 151 257 145 196C219 208 275 267 307 350"/>
+    <path d="M354 370C435 325 489 257 495 196C421 208 365 267 333 350"/>
+    <path d="M275 382C186 375 116 337 87 287C165 272 239 300 294 355"/>
+    <path d="M365 382C454 375 524 337 553 287C475 272 401 300 346 355"/>
+    <path d="M99 403C174 432 250 428 311 394"/>
+    <path d="M541 403C466 432 390 428 329 394"/>
+    <path d="M100 403C82 403 73 393 78 382"/>
+    <path d="M540 403C558 403 567 393 562 382"/>
+  </g>
+  <circle cx="320" cy="395" r="26" fill="url(#gold)" stroke="#FFE99A" stroke-width="4"/>
+</svg>
